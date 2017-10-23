@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using Hierarchy.Interfaces;
 
-namespace Hierarchy
+namespace Hierarchy.Classes
 {
     public abstract class Aircraft: IAircraft
     {
@@ -13,5 +13,13 @@ namespace Hierarchy
         public int FuelCapacity { get; private set; }
         public int Range { get; private set; }
         public int Crew { get; private set; }
+        public Aircraft(string name, int carrying, int fuelcapacity, int range, int crew)
+        {
+            Name = name;
+            Carrying = carrying;
+            FuelCapacity = fuelcapacity;
+            Range = range;
+            Crew = crew;
+        }
     }
 }

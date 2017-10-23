@@ -9,5 +9,11 @@ namespace Hierarchy.Classes
     public class Freighter: CommercialAviation, ISizeOfCargo
     {
         public int SizeOfCargoSpace { get; private set; }
+        public Freighter(string name, int carrying, int fuelcapacity, int range, int crew,
+            string regnumber, int sizeofcargospace)
+            : base(name, carrying, fuelcapacity, range, crew, regnumber)
+        {
+            SizeOfCargoSpace = sizeofcargospace;
+        }
     }
 }
