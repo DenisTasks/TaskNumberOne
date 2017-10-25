@@ -9,8 +9,8 @@ namespace Hierarchy.Interfaces
     {
         string Name { get; }
         int Carrying { get; }
-        int FuelCapacity { get; }
-        int Range { get; }
+        double FuelCapacity { get; }
+        double Range { get; }
         int Crew { get; }
     }
 }

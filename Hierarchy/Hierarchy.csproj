@@ -45,23 +45,31 @@
   <ItemGroup>
     <Compile Include="Classes\AgriCultural.cs" />
     <Compile Include="Classes\Aircraft.cs" />
+    <Compile Include="Classes\Airline.cs" />
     <Compile Include="Classes\Atomization.cs" />
     <Compile Include="Classes\CommercialAviation.cs" />
     <Compile Include="Classes\Freighter.cs" />
     <Compile Include="Classes\MilitaryAviation.cs" />
     <Compile Include="Classes\Passenger.cs" />
     <Compile Include="Classes\WeaponType.cs" />
+    <Compile Include="Factory\Creator.cs" />
+    <Compile Include="Factory\NewAgri.cs" />
+    <Compile Include="Factory\NewFreighter.cs" />
+    <Compile Include="Factory\NewMilitary.cs" />
+    <Compile Include="Factory\NewPass.cs" />
     <Compile Include="Interfaces\IAircraft.cs" />
     <Compile Include="Interfaces\IAtomization.cs" />
     <Compile Include="Interfaces\ICommercialAviation.cs" />
     <Compile Include="Interfaces\IMilitaryAviation.cs" />
     <Compile Include="Interfaces\INumberOfPassengers.cs" />
     <Compile Include="Interfaces\ISizeOfCargo.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -9,7 +9,7 @@ namespace Hierarchy.Classes
     public abstract class CommercialAviation: Aircraft, ICommercialAviation
     {
         public string RegNumber { get; private set; }
-        public CommercialAviation(string name, int carrying, int fuelcapacity, int range, int crew,
+        public CommercialAviation(string name, int carrying, double fuelcapacity, double range, int crew,
             string regnumber)
             : base(name, carrying, fuelcapacity, range, crew)
         {

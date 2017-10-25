@@ -7,7 +7,7 @@ namespace Hierarchy.Classes
 {
     public class Airline
     {
-        List<Aircraft> MyAirline;
+        private List<Aircraft> MyAirline;
         public Airline()
         {
             MyAirline = new List<Aircraft>();
@@ -15,6 +15,10 @@ namespace Hierarchy.Classes
         public void AddAircraftRange(params Aircraft[] aircrafts)
         {
             MyAirline.AddRange(aircrafts);
+        }
+        public void Add(Aircraft aircraft)
+        {
+            MyAirline.Add(aircraft);
         }
         public int GetSummaryPeople()
         {
@@ -36,13 +40,17 @@ namespace Hierarchy.Classes
             }
             return summ;
         }
+        public IEnumerable<Aircraft> Aircrafts()
+        {
+            return MyAirline;
+        }
         public IEnumerable<Aircraft> SortByRange()
         {
-            return MyAirline.OrderBy(x => x.Range).ToList();
+            return MyAirline.OrderBy(x => x.Range).ToArray();
         }
         public IEnumerable<Aircraft> SearchOfFuel(double a, double b)
         {
-            return MyAirline.Where(x => (((double)x.FuelCapacity / (double)x.Range) >= a) && (((double)x.FuelCapacity / (double)x.Range) <= b)).ToList();
+            return MyAirline.Where(x => ((x.FuelCapacity / x.Range) >= a) && ((x.FuelCapacity / x.Range) <= b)).ToArray();
         }
     }
 }

@@ -9,7 +9,7 @@ namespace Hierarchy.Classes
     public class Passenger: CommercialAviation, INumberOfPassengers
     {
         public int NumberOfPassengers { get; private set; }
-        public Passenger(string name, int carrying, int fuelcapacity, int range, int crew,
+        public Passenger(string name, int carrying, double fuelcapacity, double range, int crew,
             string regnumber, int numberofpassengers)
             : base(name, carrying, fuelcapacity, range, crew, regnumber)
         {
