@@ -43,6 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BuilderTemplate\Builder.cs" />
+    <Compile Include="BuilderTemplate\ConcreteBuilder.cs" />
+    <Compile Include="BuilderTemplate\Director.cs" />
     <Compile Include="Classes\AgriCultural.cs" />
     <Compile Include="Classes\Aircraft.cs" />
     <Compile Include="Classes\Airline.cs" />
@@ -58,6 +61,7 @@
     <Compile Include="Factory\NewMilitary.cs" />
     <Compile Include="Factory\NewPass.cs" />
     <Compile Include="Interfaces\IAircraft.cs" />
+    <Compile Include="Interfaces\IAirline.cs" />
     <Compile Include="Interfaces\IAtomization.cs" />
     <Compile Include="Interfaces\ICommercialAviation.cs" />
     <Compile Include="Interfaces\IMilitaryAviation.cs" />

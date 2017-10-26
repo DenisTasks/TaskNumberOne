@@ -83,6 +83,27 @@
       <FileName>Factory\NewMilitary.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="Hierarchy.BuilderTemplate.Builder" Collapsed="true">
+    <Position X="12" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAEAQAAACAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>BuilderTemplate\Builder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hierarchy.BuilderTemplate.ConcreteBuilder" Collapsed="true">
+    <Position X="12" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAEAQAAACAAAAAAAAAAAAAAAAAAAAAAAAEQ=</HashCode>
+      <FileName>BuilderTemplate\ConcreteBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hierarchy.BuilderTemplate.Director" Collapsed="true">
+    <Position X="14" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BuilderTemplate\Director.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Interface Name="Hierarchy.Interfaces.IAircraft" Collapsed="true">
     <Position X="7.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>

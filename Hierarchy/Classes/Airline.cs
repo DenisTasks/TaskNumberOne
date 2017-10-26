@@ -2,19 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Hierarchy.Interfaces;
 
 namespace Hierarchy.Classes
 {
-    public class Airline
+    public class Airline : IAirline
     {
-        private List<Aircraft> MyAirline;
+        private ICollection<Aircraft> MyAirline;
         public Airline()
         {
             MyAirline = new List<Aircraft>();
-        }
-        public void AddAircraftRange(params Aircraft[] aircrafts)
-        {
-            MyAirline.AddRange(aircrafts);
         }
         public void Add(Aircraft aircraft)
         {
@@ -48,7 +45,7 @@ namespace Hierarchy.Classes
         {
             return MyAirline.OrderBy(x => x.Range).ToArray();
         }
-        public IEnumerable<Aircraft> SearchOfFuel(double a, double b)
+        public IEnumerable<Aircraft> SearchByFuel(double a, double b)
         {
             return MyAirline.Where(x => ((x.FuelCapacity / x.Range) >= a) && ((x.FuelCapacity / x.Range) <= b)).ToArray();
         }
