@@ -31,12 +31,12 @@ namespace Hierarchy
             {
                 if (item is NewPass)
                 {
-                    company.Add(item.FactoryMethod("Boeng-747", 30, 2000, 1800, 5, "EW-1562", 301));
-                    company.Add(item.FactoryMethod("Boeng-737", 32, 1800, 1900, 6, "ES-1666", 340));
+                    company.Add(item.FactoryMethod("Boeng-747", 30, 2000, 1800, 5, "EW-111", 301));
+                    company.Add(item.FactoryMethod("Boeng-737", 32, 1800, 1900, 6, "ES-166", 340));
                 }
                 if (item is NewFreighter)
                 {
-                    company.Add(item.FactoryMethod("Airbus-900", 150, 3600, 3599, 2, "IT-8668", 220));
+                    company.Add(item.FactoryMethod("Airbus-900", 150, 3600, 3599, 2, "IT-866", 220));
                 }
                 if (item is NewAgri)
                 {
@@ -44,7 +44,7 @@ namespace Hierarchy
                 }
                 if (item is NewMilitary)
                 {
-                    company.Add(item.FactoryMethod("SU-425", 15, 1200, 1099, 1, 2017, WeaponType.Rocket));
+                    company.Add(item.FactoryMethod("SU-425", 15, 1200, 1099, 1, 20171, WeaponType.Rocket));
                 }
             }
             return company;
@@ -54,15 +54,12 @@ namespace Hierarchy
         {
             IAirline MyAirline = CreateFromFactory();
             IAirline MyBelavia = CreateFromBuilder();
-
             Console.WriteLine("Общая вместимость флота компании {0} чел.", MyAirline.GetSummaryPeople());
-            Console.WriteLine("________________________________");
             Console.WriteLine("Общая грузоподъемность авиакомпании {0} т.", MyAirline.GetSummaryCarrying());
-            Console.WriteLine("________________________________");
             Console.WriteLine("Сортировка по дальности полета: ");
             foreach (var item in MyAirline.SortByRange())
             {
-                Console.WriteLine("{0} имеет дальность полета {1} км.", item.Name, item.Range);
+                Console.WriteLine("   {0} имеет дальность полета {1} км.", item.Name, item.Range);
             }
             Console.WriteLine("________________________________");
             foreach (var item in MyAirline.SearchByFuel(0.94, 1.01))

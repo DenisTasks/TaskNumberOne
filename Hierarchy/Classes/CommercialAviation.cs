@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using Hierarchy.Interfaces;
 
 namespace Hierarchy.Classes
@@ -13,7 +14,18 @@ namespace Hierarchy.Classes
             string regnumber)
             : base(name, carrying, fuelcapacity, range, crew)
         {
-            RegNumber = regnumber;
+            while (true)
+            {
+                if (Regex.IsMatch(regnumber, "^[A-Z]{2}-[0-9]{3}$"))
+                {
+                    RegNumber = regnumber;
+                    break;
+                }
+                else
+                {
+                    // Invalid boardnumber;
+                }
+            }
         }
     }
 }

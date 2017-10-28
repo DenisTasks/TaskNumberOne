@@ -11,12 +11,12 @@ namespace Hierarchy.BuilderTemplate
         Airline company = new Airline();
         public override void BuildAircraftA()
         {
-            company.Add(new Passenger("Boeng-747", 30, 2000, 1800, 5, "EW-1562", 301));
-            company.Add(new Passenger("Boeng-737", 32, 1800, 1900, 6, "ES-1666", 340));
+            company.Add(new Passenger("Boeng-747", 30, 2000, 1800, 5, "EW-156", 301));
+            company.Add(new Passenger("Boeng-737", 32, 1800, 1900, 6, "ES-166", 340));
         }
         public override void BuildAircraftB()
         {
-            company.Add(new Freighter("Airbus-900", 150, 3600, 3599, 2, "IT-8668", 220));
+            company.Add(new Freighter("Airbus-900", 150, 3600, 3599, 2, "IT-866", 220));
         }
         public override void BuildAircraftC()
         {
@@ -24,7 +24,7 @@ namespace Hierarchy.BuilderTemplate
         }
         public override void BuildAircraftD()
         {
-            company.Add(new MilitaryAviation("SU-425", 15, 1200, 1099, 1, 2017, WeaponType.Rocket));
+            company.Add(new MilitaryAviation("SU-425", 15, 1200, 1099, 1, 20174, WeaponType.Rocket));
         }
         public override Airline GetCompany()
         {

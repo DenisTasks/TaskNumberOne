@@ -43,11 +43,11 @@ namespace Hierarchy.Classes
         }
         public IEnumerable<Aircraft> SortByRange()
         {
-            return MyAirline.OrderBy(x => x.Range).ToArray();
+            return MyAirline.OrderBy(x => x.Range);
         }
         public IEnumerable<Aircraft> SearchByFuel(double a, double b)
         {
-            return MyAirline.Where(x => ((x.FuelCapacity / x.Range) >= a) && ((x.FuelCapacity / x.Range) <= b)).ToArray();
+            return MyAirline.Where(x => ((x.FuelCapacity / x.Range) >= a) && ((x.FuelCapacity / x.Range) <= b));
         }
     }
 }
